@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://gitlab.com/ttych/fluent-plugin-proc-info'
   spec.license       = 'Apache-2.0'
 
-  spec.required_ruby_version = '>= 2.4.0'
+  spec.required_ruby_version = '>= 2.7.0'
 
   spec.metadata['rubygems_mfa_required'] = 'true'
 
@@ -36,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'timecop', '~> 0.9.6'
 
   spec.add_runtime_dependency 'fluentd', ['>= 0.14.10', '< 2']
+  spec.add_runtime_dependency 'procfs2', '~> 0.1'
 end
