@@ -1,0 +1,36 @@
+require:
+  - rubocop-rake
+
+AllCops:
+  TargetRubyVersion: 2.4
+  NewCops: enable
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 100
+
+# Metrics/AbcSize:
+#   Max: 40
+
+Metrics/BlockLength:
+  Exclude:
+    - fluent-plugin-proc-info.gemspec
+    - test/**/*.rb
+
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*.rb
+    - lib/fluent/plugin/in_proc_info.rb
+
+Metrics/MethodLength:
+  Max: 25
+  Exclude:
+    - test/**/*.rb
+
+Metrics/ParameterLists:
+  Exclude: []
+
+Style/Documentation:
+  Enabled: false

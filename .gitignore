@@ -1,0 +1,4 @@
+# tmp files
+/tmp
+.byebug_history
+/coverage
