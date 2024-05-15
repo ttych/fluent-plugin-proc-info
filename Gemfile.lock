@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fluent-plugin-proc-info (0.1.0)
+    fluent-plugin-proc-info (0.1.1)
       fluentd (>= 0.14.10, < 2)
       procfs2 (~> 0.1)
 
