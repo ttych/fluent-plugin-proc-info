@@ -35,7 +35,8 @@ module Fluent
 
         def probe_net_tcp
           net_inodes = proc.pid(pid).fd.select { |fd| fd.type == 'socket' }.map(&:inode)
-          tcp_sockets = net_inodes.map { |net_inode| proc.net.tcp.by_inode(net_inode) }.compact
+          proc_net_tcp = proc.net.tcp
+          tcp_sockets = net_inodes.map { |net_inode| proc_net_tcp.by_inode(net_inode) }.compact
 
           incomings = {}
           outgoings = {}
